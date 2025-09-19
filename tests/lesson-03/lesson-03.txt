@@ -1,0 +1,74 @@
+Giải thích các câu lệnh: 
+
+git commit --amend : Sửa commit gần nhất
+git commit --amend -m"<message>" : Thay đổi message của commit gần nhất
+// Sau khi commit nhưng muốn sửa message
+git commit -m "Lỗi"
+git commit --amend -m "Sửa lỗi"
+
+
+git restore --staged <file> : Hủy stage file đã được thêm vào staging area
+# Thêm sai file vào staging
+git add file-sai.txt
+# Hủy stage file đó
+git restore --staged file-sai.txt
+# File thay đổi vẫn còn trong working directory
+# Nhưng không còn trong staging area
+
+git reset HEAD~1 : Hủy commit gần nhất và đưa các thay đổi trở lại staging area
+# File đã commit sẽ trở lại staging area
+# Bây giờ có thể sửa và commit lại
+
+Hãy tưởng tượng có 1 folder lesson-3 mới được tạo. Hãy liệt kê các file theo từng
+vùng, liệt kê các commit và message tương ứng sau khi thao tác một loạt các lệnh sau
+(sẽ rất tuyệt vời nếu bạn không chạy trên máy tính thật, mà bạn chạy trong đầu, sẽ giúp
+bạn hiểu về Git rõ ràng hơn)
+
+a. Tạo 3 file file1, file2, file3
+b. Chạy lệnh: git init
+Tạo thư mục .git để bắt đầu quản lý phiên bản. Repo đang rỗng, chưa có commit nào.
+c. Chạy lệnh: git commit -m”init project”
+- Working directory: file1, file2, file3
+- Staging: 
+- Repository:
+Không thể commit nếu chưa có file nào được git add
+d. Chạy lệnh: git add file1
+- Working directory: file2, file3
+- Staging: file1
+- Repository:
+e.Chạy lệnh: git commit -m”add file”
+- Working directory: file2, file3
+- Staging: 
+- Repository: file1
+f.Chạy lệnh: git add .
+- Working directory: 
+- Staging: file2, file3
+- Repository: file1
+g.file2, file3Chạy lệnh: git restore --staged file2
+- Working directory: file2
+- Staging: file3
+- Repository: file1
+h.Chạy lệnh: git commit -m”add all files”
+- Working directory: file2
+- Staging: 
+- Repository: file1, file3
+i.Chạy lệnh: git reset HEAD~1
+- Working directory: file2
+- Staging: file3
+- Repository: file1
+
+Hãy tưởng tượng có 1 folder lesson-3-git mới được tạo ra. Hãy liệt kê các file theo
+từng vùng sau khi thao tác các lệnh sau:
+
+1 git init  Khởi tạo repo Git mới
+2 Tạo 3 file: file1.txt, file2.txt, oops/file3.txt
+3 Tạo .gitignore với nội dung
+  file1.txt
+  oops/
+4 git add .  Thêm tất cả file không bị ignore vào staging
+5 git commit -m "init project"  Commit các file đã staged
+
+.gitignore, file2.txt Không bị ignore, nên được add và commit
+file1.txt có trong .gitignore, nên không được add hay commit
+Thư mục oops/ bị ignore, nên file3.txt không được add hay commit
+

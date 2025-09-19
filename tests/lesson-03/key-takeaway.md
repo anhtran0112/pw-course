@@ -22,8 +22,8 @@
 2. Tạo 1 file .gitignore
 3. Trong file .gitignore 
     #### 3.1. Tạo 2 dòng Mat_khau/ và .enviroment
-- `git status` Mat_khau và .enviroment sẽ bị ẩn đi
-- `git status --ignored` Kiểm tra và show ra các file đang bị ignore
+    - `git status` Mat_khau và .enviroment sẽ bị ẩn đi
+    - `git status --ignored` Kiểm tra và show ra các file đang bị ignore
 
 ## Javascript Advance
 1. Conventions
