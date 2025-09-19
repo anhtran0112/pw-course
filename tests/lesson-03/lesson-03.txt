@@ -53,8 +53,8 @@ h.Chạy lệnh: git commit -m”add all files”
 - Staging: 
 - Repository: file1, file3
 i.Chạy lệnh: git reset HEAD~1
-- Working directory: file2
-- Staging: file3
+- Working directory: file2, file3
+- Staging: 
 - Repository: file1
 
 Hãy tưởng tượng có 1 folder lesson-3-git mới được tạo ra. Hãy liệt kê các file theo
@@ -62,12 +62,20 @@ từng vùng sau khi thao tác các lệnh sau:
 
 1 git init  Khởi tạo repo Git mới
 2 Tạo 3 file: file1.txt, file2.txt, oops/file3.txt
+- Working directory: file1.txt, file2.txt, oops/file3.txt
+- Staging: 
+- Repository:
 3 Tạo .gitignore với nội dung
   file1.txt
   oops/
 4 git add .  Thêm tất cả file không bị ignore vào staging
+- Working directory: file1.txt,  oops/file3.txt
+- Staging: file2.txt
+- Repository:
 5 git commit -m "init project"  Commit các file đã staged
-
+Working directory: file1.txt, oops/file3.txt
+Staging:
+Repository: file2.txt
 .gitignore, file2.txt Không bị ignore, nên được add và commit
 file1.txt có trong .gitignore, nên không được add hay commit
 Thư mục oops/ bị ignore, nên file3.txt không được add hay commit
