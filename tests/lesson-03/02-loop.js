@@ -69,11 +69,9 @@ const doanhThu = [
     { "month": 11, "total": 380 },
     { "month": 12, "total": 220 }
 ];
-
 let tongDoanhThu = 0;
 for (let f = 0; f < doanhThu.length; f++) {
 
-    tongDoanhThu+=doanhThu[f].total;
+    tongDoanhThu += doanhThu[f].total;
 }
-
 console.log(tongDoanhThu);
