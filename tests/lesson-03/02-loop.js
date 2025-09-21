@@ -15,7 +15,7 @@ for (let i = 2; i <= 9; i++) {
 //3. Tạo một mảng chứa các số lẻ từ 1 đến 99.
 let mangSoLe = [];
 for (let i = 1; i <= 99; i++) {
-    if (i % 2 != 0) {
+    if (i % 2 !== 0) {
         mangSoLe.push(i);
     }
 }
