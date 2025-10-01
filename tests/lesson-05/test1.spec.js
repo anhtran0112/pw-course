@@ -6,7 +6,7 @@ test('Basic actions', async ({ page }) => {
         await page.goto("https://material.playwrightvn.com/");
     });
 
-    await test.step('Step click', async () => {
+    await test.step('Step click Register page', async () => {
         await page.locator("//td/a[normalize-space(@href)='01-xpath-register-page.html']").click();
 
     });
@@ -28,7 +28,6 @@ test('Basic actions', async ({ page }) => {
         await page.locator("//span[@class='slider round']").click();
         //await page.locator("//div[@id='starRating']").check();
         await page.locator("//input[@type='file']").setInputFiles("tests/data-test/data-test.txt");
-        
         const starRating = page.locator("#starRating");
         const starValue = page.locator("#starRatingValue");
         await starRating.evaluate((element) => {
