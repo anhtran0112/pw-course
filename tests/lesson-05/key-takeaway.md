@@ -19,8 +19,6 @@
 | `greet(name)`    | Trả về `Hello ${name}`     | `greet("Alice")` → `Hello Alice` |
 | `calculateTotal(price, quantity, discount)` | Trả về `price * quantity - discount` | `calculateTotal(10, 5, 20)` → `30` |
 
-- **Ứng dụng**: Tính học phí cho `listStudents` hoặc `PersonRepository`.
-
 ## 3. DOM Terminology
 ### Basic Structure
 - **DOM**: Cấu trúc cây biểu diễn HTML, giúp tương tác với trang web.
@@ -39,7 +37,7 @@
 | Danh sách      | `<ul>`, `<ol>`, `<li>`   |
 | Form           | `<form>`, `<input>`, `<select>` |
 
-- **Thực hành**: Vẽ cây DOM từ HTML (ví dụ: `<body><div><p>Hello</p></div></body>`).
+- **Thực hành**: Vẽ cây DOM từ HTML
 
 ## 4. Selectors in Automation
 ### Types of Selectors
